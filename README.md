@@ -55,7 +55,7 @@ REVISION: 1
 TEST SUITE: None
 ```
 
-<b>O processo completo de provisionamento de todos os recursos no OKE deve demorar 4min</b>
+:mega: <b>O processo completo de provisionamento de todos os recursos no OKE deve demorar 4min</b>
 
 ## Acessar o RabbitMQ UI
 
