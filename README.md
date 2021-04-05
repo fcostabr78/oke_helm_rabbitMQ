@@ -39,10 +39,33 @@ $ k create ns rabbitmq
 ```
 
 ```
-$ helm install --namespace rabbitmq rabbitmq-oke/oke-helm-rabbitmq --set deployment.user=<senha> --set deployment.password=<senha>
+$ helm install rabbitmq-oke rabbitmq-oke/oke-helm-rabbitMQ --namespace rabbitmq
 ```
 
 Será apresentado o status seguinte com comando acima:
+
+```
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /home/fernando/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /home/fernando/.kube/config
+NAME: rabbitmq-oke
+LAST DEPLOYED: Mon Apr  5 17:15:37 2021
+NAMESPACE: rabbitmq
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+```
+
+<b>O processo completo de provisionamento de todos os recursos no OKE deve demorar 4min</b>
+
+## Acessar o RabbitMQ UI
+
+Para obter o IP Externo (external-ip) de acesso ao RabbitMQ, ingresse o seguinte comando via Terminal:
+
+```
+$ k get service/rabbitmq-client -n rabbitmq
+```
+
+Abra o navegador e ingresse o IP externo obtido no comando acima, seguido da porta 15672. Exemplo: http://IP:15671. Será aberto uma interface solicitando o usuário e senha. <br>
 
 
 
