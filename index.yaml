@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  oke-helm-rabbitMQ:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-05T16:10:36.035387232-03:00"
+    description: A Helm chart for Deploy Kubernetes Resources in Development Environment
+    digest: a1e80457868e2f86649f3190c7f904a35ff4af165bc20b582aaa641e90293e1d
+    name: oke-helm-rabbitMQ
+    urls:
+    - oke-helm-rabbitMQ-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-04-05T16:10:36.034898556-03:00"

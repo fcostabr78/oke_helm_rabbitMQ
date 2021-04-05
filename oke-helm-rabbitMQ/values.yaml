@@ -1,0 +1,24 @@
+deployment:
+  namespace: rabbitmq
+  httpLBPort: 15672
+  prometheusLBPort: 15692
+  prometheusContainerPort: 15692
+  amqpLBPort: 5672
+  amqpContainerPort: 5672
+  managementContainerPort: 15672
+  epmdPort: 4369
+  epmdContainerPort: 4369
+  epmdTargetPort: 4369
+  clusterRPCPort: 25672
+  clusterRPCTargetPort: 25672
+  username: aGlnaGxhbmRlcg==
+  password: Q2llZTIwMjFTdDEyMw==
+  cluster_formation_peer_discovery_backend: rabbit_peer_discovery_k8s
+  cluster_formation_k8s_host: kubernetes.default.svc.cluster.local
+  cluster_formation_k8s_address_type: hostname
+  replicas: 2
+  image: iad.ocir.io/cloudciee/rabbitmq
+  version: 1.0.0
+  node_selector: support_2
+
+

@@ -1,0 +1,22 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: rabbitmq-client
+  namespace: {{ .Values.deployment.namespace }}
+  labels:
+    app: rabbitmq
+    type: LoadBalancer
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: {{ .Values.deployment.httpLBPort }}
+    - name: prometheus
+      protocol: TCP
+      port: {{ .Values.deployment.prometheusLBPort }}
+    - name: amqp
+      protocol: TCP
+      port: {{ .Values.deployment.amqpLBPort }}
+  selector:
+    app: rabbitmq
