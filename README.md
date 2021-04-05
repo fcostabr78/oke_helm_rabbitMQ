@@ -68,7 +68,29 @@ $ k get service/rabbitmq-client -n rabbitmq
 Abra o navegador e ingresse o IP externo obtido no comando acima, seguido da porta 15672. Exemplo: http://IP:15671. Será aberto uma interface solicitando o usuário e senha. <br>
 
 
+Para obter o login e senha registrado no recurso secret, localizado no namespace rabbitmq, ingresse o seguinte comando via Terminal:
+
+```
+$ k -n rabbitmq get secrets/rabbitmq-admin -o go-template='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}'
+```
+
+Ao acessar o portal, com a senha e usuário acima, terá o seguinte:
+
+<table>
+    <tbody>
+        <tr>
+        <th><img align="left" width="600" src="https://objectstorage.us-ashburn-1.oraclecloud.com/n/idsvh8rxij5e/b/imagens_git/o/Screenshot%20from%202021-04-05%2017-32-14.png"/></th>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
 
 :heartpulse:
+
+
+
 
 
