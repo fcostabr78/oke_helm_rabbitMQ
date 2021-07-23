@@ -65,7 +65,7 @@ Para obter o IP Externo (external-ip) de acesso ao RabbitMQ, ingresse o seguinte
 $ k get service/rabbitmq-client -n rabbitmq
 ```
 
-Abra o navegador e ingresse o IP externo obtido no comando acima, seguido da porta 15672. Exemplo: http://IP:15671. Será aberto uma interface solicitando o usuário e senha. <br>
+Abra o navegador e ingresse o IP externo obtido no comando acima, seguido da porta 15672. Exemplo: http://IP:15672. Será aberto uma interface solicitando o usuário e senha. <br>
 
 
 Para obter o login e senha registrado no recurso secret, localizado no namespace rabbitmq, ingresse o seguinte comando via Terminal:
